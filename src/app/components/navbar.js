@@ -6,7 +6,7 @@ const Navbar = () => {
         { title: "reservation", link: ""},
         { title: "about us", link: ""},
         { title: "car fleet", link: ""},
-        { title: "news", link: ""},
+        { title: "news", link: "blog"},
     ]
 
 

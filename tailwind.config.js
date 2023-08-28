@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'comfortea': ['"Comfortaa"', 'sans'],
+        // 'comfortaa-nes': ['"Comfortaa"', 'sans-serif', '700'],
         'passion-one': ['"Passion One"', 'cursive']
       },
       colors: {

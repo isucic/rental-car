@@ -1,4 +1,4 @@
-// import BurgerNav from '@/app/components/burgerNav';
+import BurgerNav from '@/app/components/burgerNav';
 import Navbar from '../../components/navbar'
 import RightNavbar from '@/app/components/rightNavbar';
 
@@ -8,7 +8,7 @@ const Header = () => {
         <h1 className="font-passion-one text-5xl">LOGO</h1>
         <Navbar />
         <RightNavbar />
-        {/* <BurgerNav isOpen={true}/> */}
+        <BurgerNav isOpen={true}/>
     </div>
     )
 }
