@@ -1,5 +1,6 @@
 import Footer from "../../modules/footer/footer"
 import Header from "../../modules/header/header"
+import Image from "next/image"
 
 const AvailableCars = () => {
 
@@ -14,6 +15,17 @@ const AvailableCars = () => {
         {name:"pick-up", place:"Split airport, croatia", date:"21.4.2023", time:"09:00"},
         {name:"drop-up", place:"Split airport, croatia", date:"25.4.2023", time:"12:00"}
     ]
+
+    const cars = [
+        {category: "a", car:"VW Up", photo:"/vwup.png", price:"27,61", total:"82,84"},
+        {category: "b", car:"Hyundai i20", photo:"/hyundaii20.png", price:"30,79", total:"92,36"},
+        {category: "c", car:"VW Polo", photo:"/vwpolo.png", price:"31,19", total:"93,56"},
+        {category: "d", car:"Opel Mokka", photo:"/mokka-e.png", price:"27,61", total:"82,84"},
+        {category: "a", car:"VW Up", photo:"/vwup.png", price:"27,61", total:"82,84"},
+        {category: "a", car:"VW Up", photo:"/vwup.png", price:"27,61", total:"82,84"},
+        {category: "a", car:"VW Up", photo:"/vwup.png", price:"27,61", total:"82,84"}
+    ]
+
     return (
         <div className="flex flex-col min-h-screen items-center justify-between bg-rent-grey">
             <Header />
@@ -52,8 +64,44 @@ const AvailableCars = () => {
                     })}
                 </div>
 
-                <div className="">
+                <div className="grid lg:grid-cols-3 grid-cols-2 justify-items-center">
+                    {cars.map((car,index) => {
+                        return (
+                        <div className="bg-rent-white m-3">
+                            <div className="flex font-comfortea">
+                                <p className="font-bold">{car.car}</p><p className="pl-1">or similar</p>
+                            </div>
 
+                            <div className="relative p-10">
+                                <Image
+                                src={car.photo}
+                                alt={car.car}
+                                width={280}
+                                height={260}
+                            />
+                            </div>
+
+                            <div className="flex">
+                                <div className="block">
+                                    <p>Per Day:</p>
+                                    <p>{`${car.price}`}€</p>
+                                </div>
+
+                                <div className="lg:border-l-2 lg:border-gray-500 "></div>
+
+                                <div className="block">
+                                    <p>Total:</p>
+                                    <p>{`${car.total}`}€</p>
+                                </div>
+                            </div>
+
+                            <button>
+                                Select
+                            </button>
+                        </div>
+                        )
+                    })}
+                    
                 </div>
             </div>
             <Footer />
