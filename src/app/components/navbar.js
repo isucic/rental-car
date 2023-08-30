@@ -13,9 +13,6 @@ const Navbar = () => {
 
     const pathname = usePathname()
     const isActive = (ime) => {
-        console.log(ime)
-        console.log("ili")
-        console.log(pathname)
          return pathname.split("/")[1] === ime.split("/")[1]
     }
 
