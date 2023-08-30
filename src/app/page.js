@@ -9,7 +9,7 @@ export default function Home() {
     <main className="flex flex-col min-h-screen items-center justify-between bg-rent-grey">
       <Header />
 
-      <div className='text-sm mt-4 rounded-md bg-rent-white font-comfortea w-11/12 items-center justify-center
+      <div className='text-sm rounded-md bg-rent-white font-comfortea w-11/12 items-center justify-center
       lg:text-base lg:w-max lg:flex lg:flex-row lg:justify-evenly'>
 
         <div className="lg:flex-col p-2 lg:mx-6 mx-2 flex justify-center items-center">
