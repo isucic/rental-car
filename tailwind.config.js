@@ -17,7 +17,8 @@ module.exports = {
         'rent-red': '#B30B10',
         'rent-light-red': '#DF6060',
         'rent-white': '#FFFFFF',
-        'rent-grey': '#F5F5F5'
+        'rent-grey': '#F5F5F5',
+        'rent-dark-grey': '#808080'
       }
     },
   },

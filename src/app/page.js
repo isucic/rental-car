@@ -40,28 +40,33 @@ export default function Home() {
         </div>
       </div>
 
-    <div className="my-10 md:block hidden">
+    <div className="my-10 w-3/5 flex items-center justify-center">
       <img src="car-home.png" height="400px" width="750px" />
     </div>
     
-    <div className='border-t border-red-500 mx-8 w-[calc(100%-20px)]'></div>
+    <div className='border-t border-rent-black my-6 w-11/12'></div>
 
-    <h1 className="podnaslov uppercase text-left w-auto font-passion-one">Check this out</h1>
-    <BlogCard className="w-1/3"/>
-    <div className='flex items-center justify-center mt-6'>
-      <button className="blackbutton text-white capitalize font-passion-one text-4xl">See all</button>
+    <div className="flex w-11/12">
+      <h1 className="lg:text-7xl uppercase text-5xl font-passion-one">Check this out</h1>
+    </div>
+
+    <BlogCard className=""/>
+    <div className='flex items-center justify-center'>
+      <button className="bg-rent-black rounded-lg h-14 md:w-44 w-28 justify-center align-center w-full text-white capitalize font-passion-one md:text-4xl text-3xl">See all</button>
     </div>
 
 
-    {/* <div className='border-t border-red-500 mx-8 mx-8'></div>
+    <div className='border-t border-rent-black my-6 w-11/12'></div>
 
-    <div className="">
-      <h1 className="podnaslov uppercase text-left w-auto font-passion-one">Cars we offer</h1>
-      <CarOfferCard />
-      <div className='flex items-center justify-center mt-6'>
-        <button className="blackbutton text-white capitalize font-passion-one text-4xl">See all</button>
+      <div className="flex w-11/12">
+        <h1 className="lg:text-7xl uppercase text-5xl font-passion-one">Cars we offer</h1>
       </div>
-    </div> */}
+
+      <CarOfferCard />
+
+    <div className='flex items-center justify-center'>
+      <button className="bg-rent-black rounded-lg h-14 md:w-44 w-28 justify-center align-center w-full text-white capitalize font-passion-one md:text-4xl text-3xl">See all</button>
+    </div>
 
 
     <Footer />

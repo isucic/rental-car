@@ -34,7 +34,7 @@ const Footer = () => {
 
     return (
         // <div className="bg-red-500 w-full ">
-                <div className="w-full bg-red-500 flex justify-between sm:px-14 px-2 py-5">
+                <div className="w-full bg-red-500 flex justify-between sm:px-14 px-2 py-5 mt-3">
 
                     <div className="footeritems text-left text-2xl inline-block">
                         {createItems()}

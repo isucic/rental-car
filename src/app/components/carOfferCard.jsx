@@ -1,19 +1,25 @@
+import Image from "next/image";
 
 const CarOfferCard = () => {
     const cars = [
-        { photo: "vwup.png", title: "VW Up" },
-        { photo: "vwpolo.png", title: "VW Polo" },
-        { photo: "mercedescclass.png", title: "C class" },        
-        { photo: "nissanquasqkai.png", title: "Quasqkai" },
+        { photo: "/vwup.png", title: "VW Up" },
+        { photo: "/vwpolo.png", title: "VW Polo" },
+        { photo: "/mercedescclass.png", title: "C class" },        
+        { photo: "/nissanquasqkai.png", title: "Quasqkai" },
     ] 
 
     return (
-        <div className="flex">
+        <div className="xl:flex flex-wrap flex-row w-full justify-around grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1">
         {cars.map((car) => {
             return (
-                <div className="border rounded-md bg-rent-white flex flex-col items-center justify-center mx-1 p-4">
-                    <div className="p-3 w-72">
-                        <img src={car.photo} />
+                <div className="flex flex-col justify-self-center mb-6 rounded-md bg-rent-white items-center justify-center p-4 mb-4">
+                    <div className="p-3 relative">
+                        <Image
+                             src={car.photo}
+                             alt={car.title}
+                             width={280}
+                             height={260}
+                        />
                     </div>
                     <div className="flex font-comfortea">
                     <p className="font-bold">{car.title}</p><p className="pl-1">or similar</p>
