@@ -1,14 +1,23 @@
-import Link from "next/link"
+'use client'
 
+import Link from "next/link"
+import {usePathname} from "next/navigation"
 const Navbar = () => {
 
     const menuItems = [
         { title: "reservation", link: ""},
-        { title: "about us", link: ""},
-        { title: "car fleet", link: ""},
-        { title: "news", link: "blog"},
+        { title: "about us", link: "aboutus"},
+        { title: "car fleet", link: "carFleet"},
+        { title: "news", link: "news"},
     ]
 
+    const pathname = usePathname()
+    const isActive = (ime) => {
+        console.log(ime)
+        console.log("ili")
+        console.log(pathname)
+         return pathname.split("/")[1] === ime.split("/")[1]
+    }
 
     const createItems = () => {
         let number = 0;
@@ -17,19 +26,20 @@ const Navbar = () => {
             number++;
             const itemLink = `/${item.link === "reservation" ? "" : item.link}`;
             return (
-                <div href={itemLink} key={item.title} >
-                    <a
+                <Link href={itemLink} key={item.title} >
+                    <p
                      className={` text-black text-base lg:text-lg px-2 font-comfortea whitespace-no-wrap capitalize hover:bg-rent-light-red lg:px-5 py-2
                      ${
-                        // isActive(itemLink)
-                        // ? "underline-offset-4"
-                        // : 
+                        isActive(itemLink)
+                        ? "underline-offset-4 text-decoration-line: underline font-bold"
+                        : 
                         ""
                      }`}
                     >
                     {item.title}{" "}
-                    </a>
-                </div>
+                    </p>
+                    
+                </Link>
             )
         })
         return items;
