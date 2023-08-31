@@ -64,7 +64,7 @@ const AvailableCars = () => {
                     })}
                 </div>
 
-                <div className="grid lg:grid-cols-3 grid-cols-2 justify-items-center">
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-items-center">
                     {cars.map((car,index) => {
                         return (
                         <div className="bg-rent-white m-3 font-comfortea">
