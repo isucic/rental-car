@@ -67,9 +67,9 @@ const AvailableCars = () => {
                 <div className="grid lg:grid-cols-3 grid-cols-2 justify-items-center">
                     {cars.map((car,index) => {
                         return (
-                        <div className="bg-rent-white m-3">
-                            <div className="flex font-comfortea">
-                                <p className="font-bold">{car.car}</p><p className="pl-1">or similar</p>
+                        <div className="bg-rent-white m-3 font-comfortea">
+                            <div className="flex justify-center my-7">
+                                <p className="font-bold text-xl">{car.car}</p><p className="pl-1 text-xl">or similar</p>
                             </div>
 
                             <div className="relative p-10">
@@ -81,23 +81,26 @@ const AvailableCars = () => {
                             />
                             </div>
 
-                            <div className="flex">
+                            <div className="flex justify-around mx-4">
                                 <div className="block">
-                                    <p>Per Day:</p>
-                                    <p>{`${car.price}`}€</p>
+                                    <p className="text-xl text-rent-dark-grey my-1">Per Day:</p>
+                                    <p className="font-bold text-2xl">{`${car.price}`}€</p>
                                 </div>
 
-                                <div className="lg:border-l-2 lg:border-gray-500 "></div>
+                                <div className="lg:border-l-2 lg:border-rent-dark-grey "></div>
 
                                 <div className="block">
-                                    <p>Total:</p>
-                                    <p>{`${car.total}`}€</p>
+                                    <p className="text-xl text-rent-dark-grey my-1">Total:</p>
+                                    <p className="font-bold text-2xl">{`${car.total}`}€</p>
                                 </div>
                             </div>
 
-                            <button>
-                                Select
-                            </button>
+                            <div className="flex justify-center m-4">
+                                <button className="bg-rent-red text-2xl text-white uppercase p-3 w-full rounded-lg">
+                                    Select
+                                </button>
+                            </div>
+                            
                         </div>
                         )
                     })}
