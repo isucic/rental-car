@@ -3,6 +3,14 @@ import BlogCard from './components/blogCard'
 import CarOfferCard from './components/carOfferCard'
 
 export default function Home() {
+
+  const cars = [
+    { photo: "/vwup.png", title: "VW Up" },
+    { photo: "/vwpolo.png", title: "VW Polo" },
+    { photo: "/mercedescclass.png", title: "C class" },        
+    { photo: "/nissanquasqkai.png", title: "Quasqkai" },
+] 
+
   return (
     <div className="flex flex-col min-h-screen items-center justify-between bg-rent-grey">
       <div className='text-sm rounded-md bg-rent-white font-comfortea items-center justify-center
@@ -58,8 +66,15 @@ export default function Home() {
         <h1 className="lg:text-7xl uppercase text-5xl font-passion-one">Cars we offer</h1>
       </div>
 
-      <CarOfferCard />
-
+      <div className="grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
+      {cars.map((car) => {
+            return (
+              <CarOfferCard car={car}/>
+            )
+        }) 
+      }
+      </div>
+      
     <div className='flex items-center justify-center'>
       <button className="bg-rent-black rounded-lg h-14 md:w-44 w-28 justify-center align-center w-full text-white capitalize font-passion-one md:text-4xl text-3xl">See all</button>
     </div>

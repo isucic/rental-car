@@ -12,3 +12,6 @@ body {
     background-color: #F5F5F5; /* rent grey */
 }
 
+::-webkit-scrollbar {
+    display: none;
+  }

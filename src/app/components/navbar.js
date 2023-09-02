@@ -7,7 +7,7 @@ const Navbar = () => {
     const menuItems = [
         { title: "reservation", link: ""},
         { title: "about us", link: "aboutus"},
-        { title: "car fleet", link: "carFleet"},
+        { title: "car fleet", link: "fleet"},
         { title: "news", link: "news"},
     ]
 
