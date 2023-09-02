@@ -9,7 +9,13 @@ export default function Home() {
     { photo: "/vwpolo.png", title: "VW Polo" },
     { photo: "/mercedescclass.png", title: "C class" },        
     { photo: "/nissanquasqkai.png", title: "Quasqkai" },
-] 
+  ]
+
+  const blogPosts = [
+    { photo: "/blog1.jpg", title: "you should travel as soon as possible", article: "Travelling to see the world while you are still young especially in your 20s" },
+    { photo: "/blog2.jpg", title: "Why croatia is the best country to visit", article: "Croatia has been ranked among the world’s best countries to travel to in the Conde Nast" },
+    { photo: "/blog3.jpg", title: "Here’s what to see in winter months", article: "Plitvice Lakes National Park is one of the oldest and largest National Parks that has many" }
+  ]
 
   return (
     <div className="flex flex-col min-h-screen items-center justify-between bg-rent-grey">
@@ -48,21 +54,28 @@ export default function Home() {
       <img src="car-home.png" height="400px" width="750px" />
     </div>
     
-    <div className='border-t border-rent-black my-6 w-11/12'></div>
+    <div className='border-t border-rent-black my-6 w-full'></div>
 
-    <div className="flex w-11/12">
+    <div className="flex w-full">
       <h1 className="lg:text-7xl uppercase text-5xl font-passion-one">Check this out</h1>
     </div>
 
-    <BlogCard className=""/>
+    <div className="xl:flex flex-wrap flex-row w-full justify-around grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1">
+      {blogPosts.map((blog,index) => {
+        return (
+          <BlogCard blog={blog}/>
+        )
+      })}
+    </div>
+
     <div className='flex items-center justify-center'>
       <button className="bg-rent-black rounded-lg h-14 md:w-44 w-28 justify-center align-center w-full text-white capitalize font-passion-one md:text-4xl text-3xl">See all</button>
     </div>
 
 
-    <div className='border-t border-rent-black my-6 w-11/12'></div>
+    <div className='border-t border-rent-black my-6 w-full'></div>
 
-      <div className="flex w-11/12">
+      <div className="flex w-full">
         <h1 className="lg:text-7xl uppercase text-5xl font-passion-one">Cars we offer</h1>
       </div>
 
