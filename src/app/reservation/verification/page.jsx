@@ -1,15 +1,6 @@
-import ReservationSteps from "@/app/components/reservationSteps"
-import Footer from "@/app/modules/footer/footer"
-import Header from "@/app/modules/header/header"
-
 const Verification = () => {
     return (
-        <div className="flex flex-col min-h-screen items-center justify-between bg-rent-grey">
-            <Header />
-
-            <div className="w-11/12">
-                <ReservationSteps />
-
+            <>
                 <div className="bg-rent-white my-6 p-14 rounded-lg shadow-md font-comfortea">
                     <h1 className="font-bold text-xl mb-8">Personal information</h1>
 
@@ -77,11 +68,9 @@ const Verification = () => {
                         <p className='font-passion-one text-white text-4xl capitalize'>Confirm reservation</p>
                         </button>
                     </div>
-            </div>
+            </>
 
-            <Footer />
 
-        </div>
     )
 }
 

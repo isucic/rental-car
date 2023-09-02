@@ -1,15 +1,11 @@
-import Header from './modules/header/header'
-import Footer from './modules/footer/footer'
 import {FaRegCalendarAlt} from 'react-icons/fa'
 import BlogCard from './components/blogCard'
 import CarOfferCard from './components/carOfferCard'
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen items-center justify-between bg-rent-grey">
-      <Header />
-
-      <div className='text-sm rounded-md bg-rent-white font-comfortea w-11/12 items-center justify-center
+    <div className="flex flex-col min-h-screen items-center justify-between bg-rent-grey">
+      <div className='text-sm rounded-md bg-rent-white font-comfortea items-center justify-center
       lg:text-base lg:w-max lg:flex lg:flex-row lg:justify-evenly'>
 
         <div className="lg:flex-col p-2 lg:mx-6 mx-2 flex justify-center items-center">
@@ -67,9 +63,6 @@ export default function Home() {
     <div className='flex items-center justify-center'>
       <button className="bg-rent-black rounded-lg h-14 md:w-44 w-28 justify-center align-center w-full text-white capitalize font-passion-one md:text-4xl text-3xl">See all</button>
     </div>
-
-
-    <Footer />
-    </main>
+    </div>
   )
 }

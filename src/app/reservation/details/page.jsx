@@ -14,12 +14,7 @@ const CarDetails = () => {
     ];
 
     return (
-        <div className="flex flex-col min-h-screen items-center justify-between bg-rent-grey">
-            <Header />
-
-            <div className="w-11/12">
-                <ReservationSteps />
-
+            <>
                 <div className="lg:flex block">
                     <CarInfoCard className="lg:w-1/3 w-full"/>
 
@@ -83,10 +78,8 @@ const CarDetails = () => {
                 </div>
 
                 
-            </div> 
+            </> 
 
-            <Footer />
-        </div>
     )
 }
 

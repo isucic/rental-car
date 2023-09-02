@@ -1,10 +1,8 @@
-import Footer from "../modules/footer/footer";
-import Header from "../modules/header/header";
 import Image from "next/image";
 
 const AboutUs = () => {
 
-    const aboutUsTxt1 = "Car Rental is a registered trademark of Active cars SA which is a low cost car rental company and has been successfully operating in Croatia for over 30 years, offering a wide variety of car rental services with fully inclusive rates and no hidden extras."
+    const aboutUsTxt1 = "Car Rental is a registered trademark of Active cars SA which is a low cost car rental company and has been successfully operating in Croatia for over 30 years, offering a wide variety of car rental services with fully inclusive rates and no hidden extras.";
     const aboutUsTxt2 ="Based in Kaštela, our company today operates in more than 400 locations over the country that is making us one of the largest car rental networks in the region and the biggest independant Croatian Company. Our fleet (more than 6.000 cars) consists of a wide range of car types, including all popular categories, as well as 4X4, Mini-Vans, and MPV‘s."
     const aboutUsTxt3 =" Car Rental has extensive experience in dealing with foreign markets, using the latest technology for our central reservation system."
 
@@ -17,10 +15,7 @@ const AboutUs = () => {
 
 
     return (
-        <div className="flex flex-col min-h-screen items-center justify-between bg-rent-grey">
-            <Header />
-
-            <div className="w-11/12">
+            <>
                 <div className="w-full h-96 relative">
                     <Image
                     src="/aboutus.jpg"
@@ -48,10 +43,7 @@ const AboutUs = () => {
                 
                 </div>
 
-            </div>
-            
-            <Footer />
-        </div>
+            </>
     )
 }
 
