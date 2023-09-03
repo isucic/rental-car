@@ -23,7 +23,7 @@ const CarInfoCard = () => {
             <p className="text-xl">{car.category}</p>
         </div>
 
-        <div className="relative p-5">
+        <div className="relative p-5 flex justify-center items-center">
             <Image
                 src={car.photo}
                 alt={car.car}

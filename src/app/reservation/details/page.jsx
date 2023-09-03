@@ -24,7 +24,7 @@ const CarDetails = () => {
                                 <div className="bg-rent-white mb-6 p-7">
                                     <p className="text-xl capitalize font-bold mb-2">{add.title}</p>
                                     <div className="flex items-center justify-between">
-                                        <p className="text-rent-dark-grey text-base w-3/4">{add.description}</p>
+                                        <p className="text-rent-dark-grey text-base w-3/5">{add.description}</p>
                                         <p className="font-comfortea font-bold text-xl">{add.price}€ /day</p>
                                         <div className="flex justify-center">
                                             <button className="bg-rent-white shadow-md border border-rent-red text-rent-red text-xl uppercase p-2 w-full rounded

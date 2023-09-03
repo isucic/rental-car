@@ -4,7 +4,7 @@ import {FaFacebook, FaInstagram, FaLinkedin} from 'react-icons/fa'
 const Footer = () => {
 
     const footerItems = [
-        { title: "contact us", link: ""},
+        { title: "contact us", link: "contactus"},
         { title: "help", link: ""},
         { title: "terms & conditions", link: ""}
     ]
@@ -18,7 +18,7 @@ const Footer = () => {
             return (
                 <div href={itemLink} key={item.title} >
                     <a
-                     className={`text-white text-base font-comfortea capitalize hover:underline  
+                     className={`cursor-pointer text-white text-base font-comfortea capitalize hover:underline  
                      ${
                         ""
                      }`}
@@ -43,13 +43,13 @@ const Footer = () => {
                     <div className="pb-10 sm:pb-0 pt-5 sm:text-base text-sm">
                         <p className="uppercase font-comfortea text-white">FOLLOW US:</p>
                         <div className="flex pt-2">
-                            <div className="flex items-center justify-around md:mr-5 mr-3 text-white">
+                            <div className="cursor-pointer flex items-center justify-around md:mr-5 mr-3 text-white">
                                 <FaInstagram size={35}/>
                             </div>
-                            <div className="flex items-center justify-around md:mr-5 mr-3 text-white">
+                            <div className="cursor-pointer flex items-center justify-around md:mr-5 mr-3 text-white">
                                 <FaFacebook size={35}/>
                             </div>
-                            <div className="flex items-center justify-around md:mr-5 mr-3 text-white">
+                            <div className="cursor-pointer flex items-center justify-around md:mr-5 mr-3 text-white">
                                 <FaLinkedin size={35}/>
                             </div>
 

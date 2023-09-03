@@ -25,7 +25,7 @@ const Navbar = () => {
             return (
                 <Link href={itemLink} key={item.title} >
                     <p
-                     className={` text-black text-base lg:text-lg px-2 font-comfortea whitespace-no-wrap capitalize hover:bg-rent-light-red lg:px-5 py-2
+                     className={` text-black text-base lg:text-lg font-comfortea whitespace-no-wrap capitalize hover:bg-rent-light-red transition duration-300 ease-in-out px-2 py-2
                      ${
                         isActive(itemLink)
                         ? "underline-offset-4 text-decoration-line: underline font-bold"

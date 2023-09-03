@@ -1,6 +1,3 @@
-import ReservationSteps from "@/app/components/reservationSteps"
-import Footer from "../../modules/footer/footer"
-import Header from "../../modules/header/header"
 import Image from "next/image"
 
 const AvailableCars = () => {

@@ -1,20 +1,33 @@
+"use client"
+
 import {FaRegCalendarAlt} from 'react-icons/fa'
 import BlogCard from './components/blogCard'
 import CarOfferCard from './components/carOfferCard'
+import { useRouter } from 'next/navigation'
+
+import data from './json/data.json'
+import { useState } from 'react'
 
 export default function Home() {
+
+  const [location,setLocation] = useState("");
+  const [pickupDate,setPickupDate] = useState("");
+
+  function handleSearch() {
+    // onSearch(location, pickupDate)
+    router.push("/reservation/available")
+  }
+
+  const blogPosts = data.blog;
+  const places = data.location;
+
+  const router = useRouter()
 
   const cars = [
     { photo: "/vwup.png", title: "VW Up" },
     { photo: "/vwpolo.png", title: "VW Polo" },
     { photo: "/mercedescclass.png", title: "C class" },        
     { photo: "/nissanquasqkai.png", title: "Quasqkai" },
-  ]
-
-  const blogPosts = [
-    { photo: "/blog1.jpg", title: "you should travel as soon as possible", article: "Travelling to see the world while you are still young especially in your 20s" },
-    { photo: "/blog2.jpg", title: "Why croatia is the best country to visit", article: "Croatia has been ranked among the world’s best countries to travel to in the Conde Nast" },
-    { photo: "/blog3.jpg", title: "Here’s what to see in winter months", article: "Plitvice Lakes National Park is one of the oldest and largest National Parks that has many" }
   ]
 
   return (
@@ -24,7 +37,15 @@ export default function Home() {
 
         <div className="lg:flex-col p-2 lg:mx-6 mx-2 flex justify-center items-center">
           <p className="my-4 lg:my-2 font-bold">Pick Up & Return location</p>
-          <input className="font-comfortea bg-white w-full h-fit border border-slate-300 rounded-md pl-1 py-2 pb-1 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Split Airport, Croatia" type="text" name="search"/>
+          <select className="font-comfortea bg-white w-full h-fit border border-slate-300 rounded-md pl-1 py-2 pb-1 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm">
+          {places.map((place,index ) => {
+            return (
+              <option>
+                {place.name}
+              </option>
+            )
+          })}
+          </select>
 
         </div>
 
@@ -44,7 +65,9 @@ export default function Home() {
         
 
         <div className='p-2 flex mx-6 flex items-center justify-center'>
-          <button className='bg-rent-black rounded-lg h-14 lg:w-44 justify-center align-center w-full'>
+          <button 
+           onClick={handleSearch}
+           className='bg-rent-black rounded-lg h-14 lg:w-44 justify-center align-center w-full'>
             <p className='font-passion-one text-white text-4xl uppercase'>Start</p>
           </button>
         </div>
@@ -69,7 +92,11 @@ export default function Home() {
     </div>
 
     <div className='flex items-center justify-center'>
-      <button className="bg-rent-black rounded-lg h-14 md:w-44 w-28 justify-center align-center w-full text-white capitalize font-passion-one md:text-4xl text-3xl">See all</button>
+      <button 
+       className="bg-rent-black rounded-lg h-14 md:w-44 w-28 justify-center align-center w-full text-white capitalize font-passion-one md:text-4xl text-3xl"
+       onClick={() => router.push("/news")}
+      >
+        See all</button>
     </div>
 
 
@@ -89,7 +116,12 @@ export default function Home() {
       </div>
       
     <div className='flex items-center justify-center'>
-      <button className="bg-rent-black rounded-lg h-14 md:w-44 w-28 justify-center align-center w-full text-white capitalize font-passion-one md:text-4xl text-3xl">See all</button>
+      <button 
+       className="bg-rent-black rounded-lg h-14 md:w-44 w-28 justify-center align-center w-full text-white capitalize font-passion-one md:text-4xl text-3xl"
+      onClick={() => router.push("/fleet")}
+      >
+        See all
+      </button>
     </div>
     </div>
   )

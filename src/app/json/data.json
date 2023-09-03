@@ -1,0 +1,41 @@
+{
+    "blog": [
+    {
+        "id": 1,
+        "photo": "/blog1.jpg",
+        "title": "Exploring the Wonders of Machu Picchu",
+        "article": "Machu Picchu, often referred to as the 'Lost City of the Incas,' is one of the most iconic archaeological sites in the world. Located high in the Andes Mountains of Peru, this ancient citadel offers breathtaking views and a glimpse into the Inca civilization. With its mysterious history and stunning architecture, a visit to Machu Picchu is a must for any traveler.\n\nMachu Picchu was built in the 15th century and abandoned just over a century later during the Spanish Conquest. It remained hidden from the world until its rediscovery in 1911 by American historian and explorer Hiram Bingham. Today, it is a UNESCO World Heritage Site and draws visitors from all over the globe.\n\nThe journey to Machu Picchu includes a scenic train ride and a hike along the Inca Trail, which is a thrilling adventure in itself. Once you arrive, you'll be amazed by the intricate stone buildings, terraces, and temples that make up this ancient city. The Intihuatana stone, believed to be a ritual stone, adds to the mystique of the site.\n\nDon't forget to explore the nearby town of Aguas Calientes, where you can soak in natural hot springs after your trek. Machu Picchu is a destination that promises history, culture, and natural beauty all in one."
+    },
+    {
+        "id": 2,
+        "photo": "/blog1.jpg",
+        "title": "Travel relieves stress and boosts mental health",
+        "article": "The most obvious and potentially most important health benefit of travelling is stress reduction. Traveling has the ability to take you out of our daily routine and into new surroundings and experiences and this can reset your body and mind. Even planning a trip can have a fantastic effect on the body – it boosts happiness and feels rewarding. Not only does travel reduce stress but it expands the mind. Meeting new people and adapting to new situations makes one more globally and culturally aware. This keeps the mind sharp, increases creativity and helps with personal growth.This truly depends on the nature of your travels and whether you’ll be indulging in three scoops of gelato a day. Regardless, travel can be an opportunity to escalate your fitness routines. While travelling we will generally be more active than sitting in an office chair all day. While touring Europe or visiting Disney World travelers can rack up as many as 20,000-30,000 steps per day. Activities like paddle boarding, hiking and swimming can help to boost fitness.Travel improves sleep patterns. Poor sleep mixed with high stress is a toxic mixture for our mental state. The health detriments of poor sleep are varied, from irritability to poor cognitive performance and efficiency. It is recommended that adults sleep at least seven to seven and a half hours per night and this can be more easily achieved while traveling. In the Mediterranean you might even engage in an afternoon nap after lunch, also known as a Siesta. It’s obvious that travel comes with a myriad of health benefits for the mind, body and soul, so what are you waiting for – it's time to book that holiday. Your health will thank you for it!"
+    },
+    {
+        "id": 3,
+        "photo": "/blog3.jpg",
+        "title": "Croatia ranked in top 15 of world’s best countries",
+        "article": "Croatia has been ranked among the world’s best countries to travel to in the Conde Nast Traveller Reader’s Choice Awards for 2022.Europe dominated this year’s awards across most categories and they made up a large portion of the best countries to travel to, which are voted for by readers of the popular world travel magazine.Croatia came in at no.14 on the list of best countries in the world to travel to in 2022 with a score of 88.33, just ahead of Morocco and Sweden. Portugal was no.1 on the list with a score of 91.22, followed by Japan, Thailand and Singapore. Two Croatian cities recently ranked among the world’s most trending destinations in 2022 according to TripAdvisor. Dubrovnik was ranked 5th and Split was ranked 13th in the world."
+    }
+    
+],
+    "cars": [
+        { "location": 1, "from": "14.8.2023", "to": "20.10.2023", "category": "a", "title": "VW Up", "photo": "/vwup.png", "price": "27,61", "total": "82,84" },
+        { "category": "b", "title": "Hyundai i20", "photo": "/hyundaii20.png", "price": "30,79", "total": "92,36" },
+        { "category": "c", "title": "VW Polo", "photo": "/vwpolo.png", "price": "31,19", "total": "93,56" },
+        { "category": "d", "title": "Opel Mokka", "photo": "/mokka-e.png", "price": "27,61", "total": "82,84" },
+        { "category": "a", "title": "VW Up", "photo": "/vwup.png", "price": "27,61", "total": "82,84" },
+        { "category": "a", "title": "VW Up", "photo": "/vwup.png", "price": "27,61", "total": "82,84" }
+    ],
+    "location": [
+        {"id": 1, "name": "Split Airport"},
+        {"id": 2, "name": "Split Centar"},
+        {"id": 3, "name": "Zagreb Airport"},
+        {"id": 4, "name": "Zagreb Centar"},
+        {"id": 5, "name": "Dubrovnik Airport"},
+        {"id": 6, "name": "Dubrovnik Centar"}
+    ]
+      
+
+}
