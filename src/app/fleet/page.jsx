@@ -20,83 +20,53 @@ const Fleet = () => {
         {category: "c", title:"Nissan Quasqkai", photo:"/nissanquasqkai.png", price:"30,79", total:"92,36"}
     ]
 
-    const types = ["mini", "economy", "compact"];
+    const types = [
+        {category: "a", title: "mini", description: "Perfect for solo travelers or couples, seats up to 2 passengers comfortably."},
+        {category: "b", title: "economy", description: "Great for small families or groups of up to 4 passengers."},
+        {category: "c", title: "compact", description: "Ideal for slightly larger groups, accommodating up to 5 passengers with ease."},
+    ];
 
-    const scrollLeft = () => {
-        document.getElementById("content").scrollLeft -=400;
+    const scrollLeft = (number) => {
+        document.getElementById(number).scrollLeft -=400;
     }
-    const scrollRight= () => {
-        console.log("uslo")
-        document.getElementById("content").scrollLeft +=400;
+    const scrollRight= (number) => {
+        document.getElementById(number).scrollLeft +=400;
     }
 
     return (
         <div className="">
-            <h1 className="uppercase font-comfortea text-2xl flex items-center">
-                Mini
-                <div className="dropdown relative hover:cursor-pointer">
-                    <FaInfoCircle className="arrow-fleet text-xl ml-3 mb-2 " />
-                    <div className="information-dropdown hidden dropdown-content bg-rent-white p-2 rounded-md absolute z-10 shadow-2xl w-max bottom-2 left-10">
-                        <p className="text-base">Smaller car that seats up to 4 people</p>
-                    </div>
-                </div>
-            </h1>
-            <div className="w-full border-b-2 border-rent-red"></div>
-            <div className="flex items-center gap-5">
-                
-                <FaArrowCircleLeft onClick={scrollLeft} className="text-5xl cursor-pointer"/>
-                
-                <div id="content" className="ml-8 carousel py-4 flex items-center justify-start overflow-x-auto scroll-smooth scrollbar-hide gap-8">
-                    {cars.map((car) => {
-                        if (car.category === "a") {
-                        return (
-                            <CarOfferCard car={car} />
-                        );
-                    }
-                    return null;
-                }) 
-                    }
-                </div>
-                <FaArrowCircleRight onClick={scrollRight} className="text-5xl cursor-pointer"/>
-            </div>
+            {
+                types.map((type,index) => {
+                    return (
+                        <>
+                         <h1 className="uppercase font-comfortea text-2xl flex items-center">
+                        {type.title}
+                        <div className="dropdown relative hover:cursor-pointer">
+                            <FaInfoCircle className="arrow-fleet text-xl ml-3 mb-2 " />
+                            <div className="information-dropdown hidden dropdown-content bg-rent-white p-2 rounded-md absolute z-10 shadow-2xl w-max bottom-2 left-10">
+                                <p className="normal-case text-base">{type.description}</p>
+                            </div>
+                        </div>
+                        </h1>
 
-            <h1 className="uppercase font-comfortea text-2xl flex items-center">economy<FaInfoCircle className="text-xl ml-3 mb-2" /></h1>
-            <div className="w-full border-b-2 border-rent-red"></div>
-            <div className="flex items-center gap-5">
-                <FaArrowCircleLeft className="text-5xl"/>
-                <div className="ml-8 carousel py-4 flex items-center justify-start overflow-x-auto scroll-smooth scrollbar-hide gap-8">
-                    {cars.map((car) => {
-                        if (car.category === "b") {
-                        return (
-                            <CarOfferCard car={car} />
-                        );
-                    }
-                    return null;
-                }) 
-                    }
-                </div>
-                <FaArrowCircleRight className="text-5xl"/>
-            </div>
-
-            <h1 className="uppercase font-comfortea text-2xl flex items-center">compact<FaInfoCircle className="text-xl ml-3 mb-2" /></h1>
-            <div className="w-full border-b-2 border-rent-red"></div>
-            <div className="flex items-center gap-5">
-                <FaArrowCircleLeft className="text-5xl"/>
-                <div className="ml-8 carousel py-4 flex items-center justify-start overflow-x-auto scroll-smooth scrollbar-hide gap-8">
-                    {cars.map((car) => {
-                        if (car.category === "c") {
-                        return (
-                            <CarOfferCard car={car} />
-                        );
-                    }
-                    return null;
-                }) 
-                    }
-                </div>
-                <FaArrowCircleRight className="text-5xl"/>
-            </div>
-            
-            
+                        <div className="w-full border-b-2 border-rent-red"></div>
+                        <div className="flex items-center gap-5">
+                
+                        <FaArrowCircleLeft onClick={() => scrollLeft(type.category)} className="hidden md:block text-5xl cursor-pointer"/>
+                        <div id={type.category} className="ml-8 carousel py-4 flex items-center justify-start overflow-x-auto scroll-smooth scrollbar-hide gap-8">
+                        {cars.map((car) => {
+                            if(car.category === type.category)
+                            return (
+                                <CarOfferCard car={car} />
+                            )
+                        })}
+                        </div>
+                        <FaArrowCircleRight onClick={() => scrollRight(type.category)} className="hidden md:block text-5xl cursor-pointer"/>
+                        </div>
+                        </>
+                    )
+                })
+            }        
         </div>
     )
 }
