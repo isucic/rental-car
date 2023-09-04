@@ -25,3 +25,7 @@ body {
     display: flex;
     flex-direction: column;
   }
+
+  input {
+    background-color: #F5F5F5;
+  }
