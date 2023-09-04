@@ -32,7 +32,7 @@ const ReservationSteps = () => {
             }
         </div>
 
-        <div className="mb-10 bg-rent-white flex justify-around my-4 font-comfortea capitalize xl:text-2xl lg:text-xl md:text-base text-sm">
+        <div className="mb-10 bg-rent-white flex justify-around my-4 font-comfortea capitalize xl:text-xl lg:text-xl md:text-base text-sm">
                     {reservation.map((res,index) => {
                         return (
                             <div className="md:flex block">

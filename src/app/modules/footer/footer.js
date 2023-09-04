@@ -16,16 +16,16 @@ const Footer = () => {
             number++;
             const itemLink = `/${item.link === "reservation" ? "" : item.link}`;
             return (
-                <div href={itemLink} key={item.title} >
-                    <a
-                     className={`cursor-pointer text-white text-base font-comfortea capitalize hover:underline  
+                <Link href={itemLink} key={item.title} >
+                    <p
+                     className={`cursor-pointer mb-1 text-white text-base font-comfortea capitalize hover:underline  
                      ${
                         ""
                      }`}
                     >
                     {item.title}{" "}
-                    </a>
-                </div>
+                    </p>
+                </Link>
             )
         })
         return items;
@@ -36,7 +36,7 @@ const Footer = () => {
         // <div className="bg-red-500 w-full ">
                 <div className="w-full bg-red-500 flex justify-between sm:px-14 px-2 py-5 mt-3">
 
-                    <div className="footeritems text-left text-2xl inline-block">
+                    <div className="pb-10 sm:pb-0 pt-5 text-left text-2xl inline-block">
                         {createItems()}
                     </div>
 

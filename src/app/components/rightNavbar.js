@@ -41,7 +41,7 @@ const RightNavbar = ({mobile}) => {
                     </div>
                 </div>
 
-                <select class="block font-comfortea ml-4 leading-5 bg-rent-grey focus:outline-none cursor-pointer">
+                <select className="block font-comfortea ml-4 leading-5 bg-rent-grey focus:outline-none cursor-pointer">
                     <option className='bg-rent-grey focus:outline-none cursor-pointer'>English</option>
                     <option className='bg-rent-grey focus:outline-none cursor-pointer'>Hrvatski</option>
                 </select>

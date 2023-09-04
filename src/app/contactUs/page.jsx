@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react";
 
-const ContactUs = () => {
+const Contactus = () => {
     return (
         <div className="bg-rent-white my-6 p-14 rounded-lg shadow-md font-comfortea">
             <h1 className="uppercase">Contact us</h1>
@@ -13,4 +13,4 @@ const ContactUs = () => {
     )
 }
 
-export default ContactUs;
+export default Contactus;
