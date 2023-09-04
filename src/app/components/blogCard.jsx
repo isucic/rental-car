@@ -38,7 +38,7 @@ const BlogCard = ({blog}) => {
                 <p className="text-base text-rent-dark-grey my-4">{blog.article.substring(0,76) + '...'}</p>
 
                 <div className="">
-                    <button className="text-base bg-rent-red text-rent-white px-1 py-0.5 rounded-md uppercase">more</button>
+                    <button className="redbtn text-base bg-rent-red text-rent-white px-1 py-0.5 rounded-md uppercase">more</button>
                 </div>
             </div>
         </div>

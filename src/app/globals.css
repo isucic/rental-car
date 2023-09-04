@@ -14,18 +14,26 @@ body {
 
 ::-webkit-scrollbar {
     display: none;
-  }
+}
 
-  .dropdown:hover .dropdown-content {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .dropdown-content:hover {
-    display: flex;
-    flex-direction: column;
-  }
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
 
-  input {
-    background-color: #F5F5F5;
-  }
+.dropdown-content:hover {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  background-color: #F5F5F5;
+}
+
+.blackbutton:hover {
+  opacity: 0.7;
+}
+
+.redbtn:hover {
+  background-color: #D96060;
+}

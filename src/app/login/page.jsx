@@ -16,7 +16,7 @@ const Login = () => {
                 <input type="password" className="border border-dark-grey rounded-md px-3 py-2 focus:outline-none focus:ring focus:border-blue-500"/>
             </div>
 
-            <button className='my-4 bg-rent-red rounded-lg h-14 px-6 w-3/4'>
+            <button className='redbtn my-4 bg-rent-red rounded-lg h-14 px-6 w-3/4'>
             <p className='font-comfortea text-white text-2xl uppercase'>login</p>
             </button>
             <p>Don't have an account? 

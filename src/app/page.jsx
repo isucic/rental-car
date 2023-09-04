@@ -67,7 +67,7 @@ export default function Home() {
         <div className='p-2 flex mx-6 flex items-center justify-center'>
           <button 
            onClick={handleSearch}
-           className='bg-rent-black rounded-lg h-14 lg:w-44 justify-center align-center w-full'>
+           className='blackbutton bg-rent-black rounded-lg h-14 lg:w-44 justify-center align-center w-full'>
             <p className='font-passion-one text-white text-4xl uppercase'>Start</p>
           </button>
         </div>
@@ -93,7 +93,7 @@ export default function Home() {
 
     <div className='flex items-center justify-center'>
       <button 
-       className="bg-rent-black rounded-lg h-14 md:w-44 w-28 justify-center align-center w-full text-white capitalize font-passion-one md:text-4xl text-3xl"
+       className="blackbutton bg-rent-black rounded-lg h-14 md:w-44 w-28 justify-center align-center w-full text-white capitalize font-passion-one md:text-4xl text-3xl"
        onClick={() => router.push("/news")}
       >
         See all</button>
@@ -119,7 +119,7 @@ export default function Home() {
       
     <div className='flex items-center justify-center'>
       <button 
-       className="bg-rent-black rounded-lg h-14 md:w-44 w-28 justify-center align-center w-full text-white capitalize font-passion-one md:text-4xl text-3xl"
+       className="blackbutton bg-rent-black rounded-lg h-14 md:w-44 w-28 justify-center align-center w-full text-white capitalize font-passion-one md:text-4xl text-3xl"
       onClick={() => router.push("/fleet")}
       >
         See all

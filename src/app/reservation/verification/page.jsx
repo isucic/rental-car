@@ -64,7 +64,7 @@ const Verification = () => {
                    </div>
                 </div>
                     <div className='flex items-center my-6 justify-center'>
-                        <button className='bg-rent-black rounded-lg h-14 px-6 md:w-max w-full'>
+                        <button className='blackbutton bg-rent-black rounded-lg h-14 px-6 md:w-max w-full'>
                         <p className='font-passion-one text-white text-4xl capitalize'>Confirm reservation</p>
                         </button>
                     </div>
