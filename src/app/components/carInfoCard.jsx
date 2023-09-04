@@ -29,6 +29,7 @@ const CarInfoCard = () => {
                 alt={car.car}
                 width={400}
                 height={260}
+                
             />
         </div>
 

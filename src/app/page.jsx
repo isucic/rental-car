@@ -109,7 +109,9 @@ export default function Home() {
       <div className="grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
       {cars.map((car) => {
             return (
-              <CarOfferCard car={car}/>
+              <div className='w-72'>
+                <CarOfferCard car={car} />
+              </div>
             )
         }) 
       }
