@@ -23,20 +23,29 @@ const Fleet = () => {
     const types = ["mini", "economy", "compact"];
 
     const scrollLeft = () => {
-        document.getElementById("content").scrollLeft -=200;
+        document.getElementById("content").scrollLeft -=400;
     }
     const scrollRight= () => {
         console.log("uslo")
-        document.getElementById("content").scrollLeft +=200;
+        document.getElementById("content").scrollLeft +=400;
     }
 
     return (
         <div className="">
-            <h1 className="uppercase font-comfortea text-2xl flex items-center">small car<FaInfoCircle className="text-xl ml-3 mb-2" /></h1>
+            <h1 className="uppercase font-comfortea text-2xl flex items-center">
+                Mini
+                <div className="dropdown relative hover:cursor-pointer">
+                    <FaInfoCircle className="arrow-fleet text-xl ml-3 mb-2 " />
+                    <div className="information-dropdown hidden dropdown-content bg-rent-white p-2 rounded-md absolute z-10 shadow-2xl w-max bottom-2 left-10">
+                        <p className="text-base">Smaller car that seats up to 4 people</p>
+                    </div>
+                </div>
+            </h1>
             <div className="w-full border-b-2 border-rent-red"></div>
             <div className="flex items-center gap-5">
                 
                 <FaArrowCircleLeft onClick={scrollLeft} className="text-5xl cursor-pointer"/>
+                
                 <div id="content" className="ml-8 carousel py-4 flex items-center justify-start overflow-x-auto scroll-smooth scrollbar-hide gap-8">
                     {cars.map((car) => {
                         if (car.category === "a") {
