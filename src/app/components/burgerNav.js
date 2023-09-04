@@ -4,6 +4,7 @@ import { useState } from "react";
 import BurgerNavIcon from "./burgerNavIcon";
 import {usePathname} from "next/navigation"
 import Link from "next/link";
+import RightNavbar from "./rightNavbar";
 
 
 const BurgerNav = () => {
@@ -11,7 +12,7 @@ const BurgerNav = () => {
 
     const menuItems = [
         {title: "reservation", link: ""},
-        {title: "car fleet", link: "fleet"},
+        {title: "our cars", link: "fleet"},
         {title: "news", link: "news"},
         {title: "about us", link: "aboutus"},
     ]
@@ -49,6 +50,7 @@ const BurgerNav = () => {
                             </Link>
                         )
                     })}
+                    <RightNavbar mobile={true} />
                 </div>
             </main>
         </div>

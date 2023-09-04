@@ -18,20 +18,20 @@ const AboutUs = () => {
             <>
                 <div className="w-full h-96 relative">
                     <Image
-                    src="/aboutus.jpg"
+                    src="/aboutus.webp"
                     alt="aboutus_photo"
                     fill
                     style={{objectFit:"cover"}}
                     />
                 </div>
 
-                <div className="text-2xl my-12">
+                <div className="text-xl my-12">
                     <p className="my-7 text-justify">{aboutUsTxt1}</p>
                     <p className="my-7 text-justify">{aboutUsTxt2}</p>
                     <p className="my-7 text-justify">{aboutUsTxt3}</p>
                 </div>
 
-                <div className="text-2xl my-12">
+                <div className="text-xl my-12">
                     {info.map((line, index) => {
                         return (
                             <div key={index} className="flex my-2">

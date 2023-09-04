@@ -15,3 +15,13 @@ body {
 ::-webkit-scrollbar {
     display: none;
   }
+
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dropdown-content:hover {
+    display: flex;
+    flex-direction: column;
+  }
