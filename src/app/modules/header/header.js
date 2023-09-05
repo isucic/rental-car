@@ -7,7 +7,7 @@ import Link from 'next/link';
 const Header = () => {
     return(
     <div className="flex sm:px-14 px-2 justify-between items-center w-full mb-4">
-        <Link href="">
+        <Link href="/">
             <div className='relative p-0'>
                 <Image
                 src="/logo.png"

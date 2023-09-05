@@ -18,9 +18,9 @@ const CarInfoCard = () => {
     
     return (
         <div className="bg-rent-white rounded-md shadow-md mb-4">
-        <div className="bg-yellow-300 flex justify-between p-3">
-            <p className="font-bold text-xl">{car.name}</p>
-            <p className="text-xl">{car.category}</p>
+        <div className="bg-rent-light-red flex justify-between p-3">
+            <p className="font-bold text-xl text-white">{car.name}</p>
+            <p className="text-xl text-white">{car.category}</p>
         </div>
 
         <div className="relative p-5 flex justify-center items-center">
@@ -52,7 +52,7 @@ const CarInfoCard = () => {
             {info.map((item) => {
                 return (
                     <div className="flex items-center m-2">
-                        <FaCheck className="text-yellow-400 text-xl mr-2"/>
+                        <FaCheck className="text-rent-red text-xl mr-2"/>
                         <p className="text-xl text-rent-dark-grey capitalize">{item}</p>
                     </div>
                 )
