@@ -1,11 +1,31 @@
+"use client"
+import { useState, useEffect } from "react"
 import Image from "next/image"
+import Link from "next/link"
+import Filters from "@/app/components/Filters"
 
 const AvailableCars = () => {
 
-    const reservation = [
-        {name:"pick-up", place:"Split airport, croatia", date:"21.4.2023", time:"09:00"},
-        {name:"drop-up", place:"Split airport, croatia", date:"25.4.2023", time:"12:00"}
-    ]
+    const [avCars, setAvCars] = useState([])
+    const [clickedFilter,setClickedFilter] = useState("")
+    const [update,setupdate] = useState(false)
+
+    useEffect(() => {
+        if(clickedFilter != "") {
+            setAvCars(cars.filter((car) => car.category === clickedFilter))
+        }
+        else {
+            setAvCars(cars)
+        }
+        setupdate(false)
+    },[clickedFilter,update])
+
+    function vratiUParent(filter){
+        setClickedFilter(filter)
+    }
+    function resetFilters(){
+        setClickedFilter("")
+    }
 
     const cars = [
         {category: "a", title:"VW Up", photo:"/vwup.png", price:"27,61", total:"82,84"},
@@ -24,8 +44,10 @@ const AvailableCars = () => {
     ]
 
     return (
+            <>
+            <Filters vratiUParent={vratiUParent} resetFilters={resetFilters} clickedFilter={clickedFilter}/>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
-                {cars.map((car,index) => {
+                {avCars.map((car,index) => {
                     return (
                     <div className="bg-rent-white font-comfortea">
                         <div className="flex justify-center my-7">
@@ -57,9 +79,11 @@ const AvailableCars = () => {
                         </div>
 
                         <div className="flex justify-center m-4">
+                            <Link href="/reservation/details" className="w-full">
                             <button className="red-btn bg-rent-red text-2xl text-white uppercase p-3 w-full rounded-lg hover:bg-rent-light-red">
                                 Select
                             </button>
+                            </Link>
                         </div>
                         
                     </div>
@@ -67,6 +91,7 @@ const AvailableCars = () => {
                 })}
                 
             </div>
+            </>
     )
 }
 
