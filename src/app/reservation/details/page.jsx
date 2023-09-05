@@ -1,8 +1,6 @@
-import ReservationSteps from "@/app/components/reservationSteps";
-import Header from "../../modules/header/header"
-import Footer from "@/app/modules/footer/footer";
 import CarInfoCard from "@/app/components/carInfoCard";
 import { FaInfoCircle } from 'react-icons/fa';
+import Link from "next/link";
 
 const CarDetails = () => {
 
@@ -71,9 +69,11 @@ const CarDetails = () => {
 
                     
                     <div className='flex items-center my-6 justify-end'>
+                    <Link href="/reservation/verification">
                     <button className='bg-rent-black rounded-lg h-14 lg:w-44 justify-center align-center w-full'>
                         <p className='blackbutton font-passion-one text-white text-4xl capitalize'>Continue</p>
                     </button>
+                    </Link>
                     </div>
                 </div>
 

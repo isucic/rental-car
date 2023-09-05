@@ -1,4 +1,12 @@
+"use client"
+import { useState } from "react";
+import Link from "next/link";
+import ModalConfirm from "@/app/components/modalConfirm";
+
 const Verification = () => {
+
+    const [openModal, setOpenModal] = useState(false);
+
     return (
             <>
                 <div className="bg-rent-white my-6 p-14 rounded-lg shadow-md font-comfortea">
@@ -64,9 +72,12 @@ const Verification = () => {
                    </div>
                 </div>
                     <div className='flex items-center my-6 justify-center'>
-                        <button className='blackbutton bg-rent-black rounded-lg h-14 px-6 md:w-max w-full'>
+                        
+                        <button onClick={() => setOpenModal(true)} className='blackbutton bg-rent-black rounded-lg h-14 px-6 md:w-max w-full'>
                         <p className='font-passion-one text-white text-4xl capitalize'>Confirm reservation</p>
                         </button>
+                        
+                        <ModalConfirm open={openModal} onClose={() => setOpenModal(false)} />
                     </div>
             </>
 
