@@ -1,6 +1,7 @@
 // 'use client'
 import Image from "next/image"
 // import { useEffect, useState } from 'react';
+import Link from "next/link"
 
 
 const BlogCard = ({blog}) => {
@@ -21,6 +22,7 @@ const BlogCard = ({blog}) => {
 //   }, []);
 
 
+
     return (
         <div className="flex flex-col justify-self-center mb-6">
             <div className="md:w-80 sm:w-80 w-64 md:h-64 sm:h-72 h-64 relative">
@@ -38,7 +40,7 @@ const BlogCard = ({blog}) => {
                 <p className="text-base text-rent-dark-grey my-4">{blog.article.substring(0,76) + '...'}</p>
 
                 <div className="">
-                    <button className="redbtn text-base bg-rent-red text-rent-white px-1 py-0.5 rounded-md uppercase">more</button>
+                    <Link href={`news/${blog.id}`} className="redbtn text-base bg-rent-red text-rent-white px-1 py-0.5 rounded-md uppercase">more</Link>
                 </div>
             </div>
         </div>
