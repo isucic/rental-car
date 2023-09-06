@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      height: {
+        'front-photo': '32rem', // You can name it whatever you like and set your desired value
+      },
       fontFamily: {
         'comfortea': ['"Comfortaa"', 'sans'],
         // 'comfortaa-nes': ['"Comfortaa"', 'sans-serif', '700'],
