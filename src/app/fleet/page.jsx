@@ -49,7 +49,7 @@ const Fleet = () => {
                         </div>
                         </h1>
 
-                        <div className="w-full border-b-2 border-rent-red"></div>
+                        <div className="w-full border-b-2 border-rent-dark-grey"></div>
                         <div className="flex items-center">
                 
                         <FaArrowCircleLeft onClick={() => scrollLeft(type.category)} className="hidden md:block text-5xl cursor-pointer"/>
