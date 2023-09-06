@@ -77,6 +77,14 @@ export default function Home() {
       <img src="car-home.png" height="400px" width="750px" />
     </div>
     
+    <div className='relative my-10 w-3/5 flex items-center justify-center'>
+          <Image
+           src="car-home.png"
+           alt="car-home"
+           width={750}
+           height={400}
+           />
+    </div>
     <div className='border-t border-rent-black my-6 w-full'></div>
 
     <div className="flex w-full mt-10 mb-6">
