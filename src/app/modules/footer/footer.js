@@ -5,8 +5,8 @@ const Footer = () => {
 
     const footerItems = [
         { title: "contact us", link: "contactus"},
-        { title: "help", link: ""},
-        { title: "terms & conditions", link: ""}
+        { title: "help", link: "help"},
+        { title: "terms & conditions", link: "termsandconditions"}
     ]
 
     const pages = [
