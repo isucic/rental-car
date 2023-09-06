@@ -1,8 +1,21 @@
+"use client"
+import { usePathname } from "next/navigation"
+import Link from "next/link"
+
 const ReservationSteps = () => {
+
+    const pathname = usePathname();
+
+    const checkPage = (name) => {
+        if(pathname.split("/reservation/")[1] === name)
+         return true;
+        else return false;
+    }
+
     const steps = [
         {number:"1", name: "reservation"},
         {number:"2", name: "available"},
-        {number:"3", name: "vehicle"},
+        {number:"3", name: "details"},
         {number:"4", name: "verification"}
     ]
 
@@ -16,10 +29,11 @@ const ReservationSteps = () => {
         <div className="bg-rent-light-red flex justify-around rounded-md shadow-md">
             {steps.map((step,index) => {
                 return (
+                <Link href={step.number === "1" ? "/" : `/reservation/${step.name}`} className="cursor-pointer">
                 <div className="flex justify-center items-center">
                     <div className={`border rounded-full flex justify-center items-center sm:w-12 sm:h-12 w-8 h-8 m-2
-                    ${(step.number === "1") ? 'border-none bg-rent-white' : 'border-rent-white'}`}>
-                        <p className={`${(step.number === "1") ? 'text-rent-light-red' : 'text-rent-white'}
+                    ${checkPage(step.name) ? 'border-none bg-rent-white' : 'border-rent-white'}`}>
+                        <p className={`${(checkPage(step.name)) ? 'text-rent-light-red' : 'text-rent-white'}
                         font-passion-one sm:text-4xl text-2xl `}>{step.number}</p>
                     </div>
 
@@ -27,6 +41,7 @@ const ReservationSteps = () => {
                         <p className="font-comfortea text-xl lg:text-2xl text-white capitalize">{step.name}</p>
                     </div>
                 </div>
+                </Link>
                 )
             })
             }
