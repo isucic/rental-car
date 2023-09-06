@@ -79,8 +79,8 @@ export default function Home() {
     
     <div className='border-t border-rent-black my-6 w-full'></div>
 
-    <div className="flex w-full">
-      <h1 className="lg:text-7xl uppercase text-5xl font-passion-one">Check this out</h1>
+    <div className="flex w-full mt-10 mb-6">
+      <h1 className="lg:text-5xl uppercase text-5xl font-comfortea font-bold">What's new</h1>
     </div>
 
     <div className="xl:flex w-full justify-around grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 p-4 md:p-0">
@@ -91,25 +91,25 @@ export default function Home() {
       })}
     </div>
 
-    <div className='flex items-center justify-center'>
+    <div className='flex items-center justify-center mt-6'>
       <button 
-       className="blackbutton bg-rent-black rounded-lg h-14 md:w-44 w-32 justify-center align-center w-full text-white capitalize font-passion-one md:text-4xl text-3xl"
+       className='redbtn my-4 bg-rent-red rounded-lg h-14 px-6 w-full'
        onClick={() => router.push("/news")}
       >
-        See all</button>
+        <p className='font-comfortea text-white text-2xl uppercase'>See all</p></button>
     </div>
 
 
     <div className='border-t border-rent-black my-6 w-full'></div>
 
-      <div className="flex w-full">
-        <h1 className="lg:text-7xl uppercase text-5xl font-passion-one">Cars we offer</h1>
-      </div>
+    <div className="flex w-full mt-10 mb-6">
+      <h1 className="lg:text-5xl uppercase text-5xl font-comfortea font-bold">Cars we offer</h1>
+    </div>
 
       <div className="grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
       {cars.map((car) => {
             return (
-              <div className='w-72'>
+              <div className=''>
                 <CarOfferCard car={car} />
               </div>
             )
@@ -117,13 +117,14 @@ export default function Home() {
       }
       </div>
       
-    <div className='flex items-center justify-center'>
+    <div className='flex items-center justify-center mt-6'>
       <button 
-       className="blackbutton bg-rent-black rounded-lg h-14 md:w-44 w-32 justify-center align-center w-full text-white capitalize font-passion-one md:text-4xl text-3xl"
-      onClick={() => router.push("/fleet")}
+        className='redbtn my-4 bg-rent-red rounded-lg h-14 px-6 w-full'      
+        onClick={() => router.push("/fleet")}
       >
-        See all
+        <p className='font-comfortea text-white text-2xl uppercase'>See all</p>
       </button>
+
     </div>
     </div>
   )

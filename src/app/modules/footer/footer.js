@@ -9,10 +9,18 @@ const Footer = () => {
         { title: "terms & conditions", link: ""}
     ]
 
-    const createItems = () => {
+    const pages = [
+        {title: "reservation", link:""},
+        {title: "about us", link:"aboutus"},
+        {title: "our cars", link:"fleet"},
+        {title: "news", link:"news"},
+
+    ]
+
+    const createItems = (list) => {
         let number = 0;
         const numberOfItems = footerItems.length;
-        const items = footerItems.map((item) => {
+        const items = list.map((item) => {
             number++;
             const itemLink = `/${item.link === "reservation" ? "" : item.link}`;
             return (
@@ -37,7 +45,11 @@ const Footer = () => {
                 <div className="w-full bg-red-500 flex justify-between sm:px-14 px-2 py-5 mt-3">
 
                     <div className="pb-10 sm:pb-0 pt-5 text-left text-2xl inline-block">
-                        {createItems()}
+                        {createItems(footerItems)}
+                    </div>
+                    
+                    <div className="pb-10 sm:pb-0 pt-5 text-left text-2xl inline-block">
+                        {createItems(pages)}
                     </div>
 
                     <div className="pb-10 sm:pb-0 pt-5 sm:text-base text-sm">

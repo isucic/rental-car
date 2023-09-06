@@ -8,7 +8,7 @@ const Contactus = () => {
             <h2 className="font-bold mt-10 mb-3 sm:text-lg text-base">Have a question or just want to leave a comment:</h2>
             <p><span className="font-semibold">Phone number:</span> +385 99 123 4567</p>
             <p><span className="font-semibold">Email:</span> IDrive@rental.com</p>
-            <button className="bg-rent-red text-white my-5 px-3 py-2">Send message</button>
+            <button className="redbtn my-4 bg-rent-red rounded-lg p-4 text-white">Send message</button>
         </div>
     )
 }
