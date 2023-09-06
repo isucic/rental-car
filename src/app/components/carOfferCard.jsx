@@ -14,7 +14,7 @@ const CarOfferCard = ({car}) => {
                         alt={car.title}
                         width={(pageName === "fleet") ? 300 : 230}
                         height={(pageName === "fleet") ? 260 : 220}
-                        fit
+                        fit="true"
                 />
             </div>
             <div className="flex font-comfortea">

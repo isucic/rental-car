@@ -49,9 +49,9 @@ const CarInfoCard = () => {
         </div>
 
         <div className="block p-4">
-            {info.map((item) => {
+            {info.map((item,index) => {
                 return (
-                    <div className="flex items-center m-2">
+                    <div key={index} className="flex items-center m-2">
                         <FaCheck className="text-rent-red text-xl mr-2"/>
                         <p className="text-xl text-rent-dark-grey capitalize">{item}</p>
                     </div>

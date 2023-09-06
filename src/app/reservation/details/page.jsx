@@ -27,7 +27,7 @@ const CarDetails = () => {
                     <div className="lg:w-2/3 block w-full lg:ml-8">
                         {adds.map((add,index) => {
                             return (
-                                <div className="bg-rent-white mb-6 p-7">
+                                <div key={index} className="bg-rent-white mb-6 p-7">
                                     <p className="text-xl capitalize font-bold mb-2">{add.title}</p>
                                     <div className="flex items-center justify-between">
                                         <p className="text-rent-dark-grey text-base w-3/5">{add.description}</p>

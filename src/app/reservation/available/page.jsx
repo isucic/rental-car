@@ -49,7 +49,7 @@ const AvailableCars = () => {
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
                 {avCars.map((car,index) => {
                     return (
-                    <div className="bg-rent-white font-comfortea">
+                    <div key={index} className="bg-rent-white font-comfortea">
                         <div className="flex justify-center my-7">
                             <p className="font-bold text-xl">{car.title}</p><p className="pl-1 text-xl">or similar</p>
                         </div>

@@ -4,8 +4,9 @@ import Link from "next/link"
 
 const BlogCard = ({blog}) => {
     return (
-        <div className="flex flex-col justify-self-center mb-6 m-0 lg:m-2">
-            <div className="md:w-80 sm:w-80 w-64 md:h-64 sm:h-72 h-64 relative hover:shadow-lg">
+        <Link href={`news/${blog.id}`}>
+        <div className="flex flex-col justify-self-center mb-6 m-0 lg:m-2 hover:scale-105">
+            <div className="md:w-80 sm:w-80 w-64 md:h-64 sm:h-72 h-64 relative ">
                 <Image
                     src={blog.photo}
                     alt={blog.title}
@@ -22,11 +23,10 @@ const BlogCard = ({blog}) => {
                 <h3 className="font-bold capitalize text-xl">{blog.title}</h3>
                 <p className="text-base text-rent-dark-grey my-4">{blog.article.substring(0,76) + '...'}</p>
 
-                <div className="">
-                    <Link href={`news/${blog.id}`} className="redbtn text-base bg-rent-red text-rent-white p-2 rounded-md uppercase">more</Link>
-                </div>
+                <p className="w-fit redbtn text-base bg-rent-red text-rent-white p-2 rounded-md uppercase">more</p>
             </div>
         </div>
+        </Link>
     )
 }
 

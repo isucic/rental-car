@@ -56,7 +56,7 @@ export default function Home() {
     <div className="xl:flex w-full justify-around grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 p-4 md:p-0">
       {blogPosts.map((blog,index) => {
         return (
-          <BlogCard blog={blog}/>
+          <BlogCard key={index} blog={blog}/>
         )
       })}
     </div>
@@ -77,9 +77,9 @@ export default function Home() {
     </div>
 
       <div className="grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
-      {cars.map((car) => {
+      {cars.map((car,index) => {
             return (
-              <div className=''>
+              <div key={index}>
                 <CarOfferCard car={car} />
               </div>
             )

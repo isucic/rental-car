@@ -21,7 +21,7 @@ const ReservationSearch = () => {
             <select className="font-comfortea bg-white w-full h-fit border border-slate-300 rounded-md pl-1 py-2 pb-1 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm">
             {places.map((place,index ) => {
               return (
-                <option>
+                <option key={index}>
                   {place.name}
                 </option>
               )

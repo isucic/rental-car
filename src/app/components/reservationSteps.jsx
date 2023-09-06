@@ -29,7 +29,7 @@ const ReservationSteps = () => {
         <div className="bg-rent-light-red flex justify-around rounded-md shadow-md">
             {steps.map((step,index) => {
                 return (
-                <Link href={step.number === "1" ? "/" : `/reservation/${step.name}`} className="cursor-pointer">
+                <Link key={index} href={step.number === "1" ? "/" : `/reservation/${step.name}`} className="cursor-pointer">
                 <div className="flex justify-center items-center">
                     <div className={`border rounded-full flex justify-center items-center sm:w-12 sm:h-12 w-8 h-8 m-2
                     ${checkPage(step.name) ? 'border-none bg-rent-white' : 'border-rent-white'}`}>
@@ -50,7 +50,7 @@ const ReservationSteps = () => {
         <div className="mb-10 bg-rent-white flex justify-around my-4 font-comfortea capitalize xl:text-xl lg:text-xl md:text-base text-sm">
                     {reservation.map((res,index) => {
                         return (
-                            <div className="md:flex block">
+                            <div key={index} className="md:flex block">
                                 <p className="xl:block hidden font-bold mr-6">{res.name}</p>
                                 <p className="mr-3 text-rent-dark-grey">{res.place}</p>
                                 <div className="flex">

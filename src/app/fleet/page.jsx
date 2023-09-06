@@ -38,7 +38,7 @@ const Fleet = () => {
             {
                 types.map((type,index) => {
                     return (
-                        <>
+                        <div key={index}>
                          <h1 className="uppercase font-comfortea text-2xl flex items-center">
                         {type.title}
                         <div className="hidden md:block dropdown relative hover:cursor-pointer">
@@ -54,16 +54,16 @@ const Fleet = () => {
                 
                         <FaArrowCircleLeft onClick={() => scrollLeft(type.category)} className="hidden md:block text-5xl cursor-pointer"/>
                         <div id={type.category} className="carousel py-4 flex items-center justify-start overflow-x-auto scroll-smooth scrollbar-hide gap-8">
-                        {cars.map((car) => {
+                        {cars.map((car,index) => {
                             if(car.category === type.category)
                             return (
-                                <CarOfferCard car={car} />
+                                <CarOfferCard car={car} key={index} />
                             )
                         })}
                         </div>
                         <FaArrowCircleRight onClick={() => scrollRight(type.category)} className="hidden md:block text-5xl cursor-pointer"/>
                         </div>
-                        </>
+                        </div>
                     )
                 })
             }        
