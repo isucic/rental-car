@@ -12,12 +12,8 @@ import ReservationSearch from './components/reservationSearch'
 
 export default function Home() {
 
-  function handleSearch() {
-    router.push("/reservation/available")
-  }
 
   const blogPosts = data.blog;
-  const places = data.location;
 
   const router = useRouter();
 
@@ -39,6 +35,7 @@ export default function Home() {
            alt="car-home"
            fill
            style={{objectFit:"cover"}}
+           priority={true}
            />
           <div className="absolute inset-0 flex items-start justify-center z-10 m-10">
               <ReservationSearch />
