@@ -1,15 +1,23 @@
+"use client"
 import CarInfoCard from "@/app/components/carInfoCard";
 import { FaInfoCircle } from 'react-icons/fa';
 import Link from "next/link";
+import { useState } from "react";
 
 const CarDetails = () => {
 
-    const adds = [
-        {title: "additional driver", description: "Allow anyone in the group to drive the rental car and give yourself the opportunity to enjoy he journey from the passenger's seat.", price: "10.00"},
-        {title: "Child seat", description: "Select seat depending on weight of the child size.", price: "11.25"},
-        {title: "GPS navigation", description: "Always be on your way with a GPS in your car rental.", price: "12.50"},
-        {title: "Full insurance", description: "Reduce your responsability to a minimum charge by paying a small fee in the price of a collision waiver.", price: "11.25"}
-    ];
+    const [adds, setAdds] = useState([
+        {clicked: false, title: "additional driver", description: "Allow anyone in the group to drive the rental car and give yourself the opportunity to enjoy he journey from the passenger's seat.", price: "10.00"},
+        {clicked: false, title: "Child seat", description: "Select seat depending on weight of the child size.", price: "11.25"},
+        {clicked: false, title: "GPS navigation", description: "Always be on your way with a GPS in your car rental.", price: "12.50"},
+        {clicked: false, title: "Full insurance", description: "Reduce your responsability to a minimum charge by paying a small fee in the price of a collision waiver.", price: "11.25"}
+    ]);
+
+    const toggleAdd = (index)  => {
+        const updatedAdds = [...adds];
+        updatedAdds[index].clicked = !updatedAdds[index].clicked;
+        setAdds(updatedAdds)
+    }
 
     return (
             <>
@@ -17,7 +25,7 @@ const CarDetails = () => {
                     <CarInfoCard className="lg:w-1/3 w-full"/>
 
                     <div className="lg:w-2/3 block w-full lg:ml-8">
-                        {adds.map((add) => {
+                        {adds.map((add,index) => {
                             return (
                                 <div className="bg-rent-white mb-6 p-7">
                                     <p className="text-xl capitalize font-bold mb-2">{add.title}</p>
@@ -25,13 +33,18 @@ const CarDetails = () => {
                                         <p className="text-rent-dark-grey text-base w-3/5">{add.description}</p>
                                         <p className="font-comfortea font-bold text-xl">{add.price}€ /day</p>
                                         <div className="flex justify-center">
-                                            <button className="bg-rent-white shadow-md border border-rent-red text-rent-red text-xl uppercase p-2 w-full rounded
-                                            hover:bg-rent-red hover:text-white hover:border-white">
-                                            Add
+                                            <button
+                                                onClick={() => toggleAdd(index)}
+                                                className={`shadow-md border border-rent-red text-rent-red text-xl uppercase p-2 w-full rounded
+                                                            hover:bg-rent-red hover:text-white hover:border-white
+                                                            ${add.clicked ? "bg-rent-red text-white" : "bg-rent-white"}
+                                                            `}
+                                                >
+                                            {add.clicked ? "Remove" : "Add"}
                                             </button>
                                         </div>
                                     </div>
-                                    {(add.title === "Child seat") && 
+                                    {(add.title === "Child seat") &&
                                     <div className="flex w-1/2 items-center">
                                         <select className="block w-1/2 border border-gray-300 hover:border-gray-400 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline-blue focus:border-blue-300">
                                             <option></option>
@@ -59,7 +72,7 @@ const CarDetails = () => {
                         <p className="">Security deposit:</p>
                         <p className=" ml-2">500 €</p>
                     </div>
-                
+
                     <div className="w-full border-b-2 border-rent-red"></div>
 
                     <div className="flex justify-end my-2 text-2xl">
@@ -67,7 +80,7 @@ const CarDetails = () => {
                         <p className="md:text-3xl font-bold ml-2">593.56 €</p>
                     </div>
 
-                    
+
                     <div className='flex items-center my-6 justify-end'>
                     <Link href="/reservation/verification">
                     <button className='bg-rent-black rounded-lg h-14 lg:w-44 justify-center align-center w-full'>
@@ -77,8 +90,8 @@ const CarDetails = () => {
                     </div>
                 </div>
 
-                
-            </> 
+
+            </>
 
     )
 }

@@ -35,7 +35,7 @@ export default function Home() {
       <div className='text-sm rounded-md bg-rent-white font-comfortea items-center justify-center
       lg:text-base lg:w-max lg:flex lg:flex-row lg:justify-evenly'>
 
-        <div className="lg:flex-col p-2 lg:mx-6 mx-2 flex justify-center items-center">
+        <div className="lg:flex-col p-2 lg:mx-6 mx-2 flex lg:justify-center lg:justify-start items-center ">
           <p className="my-4 lg:my-2 font-bold">Pick Up & Return location</p>
           <select className="font-comfortea bg-white w-full h-fit border border-slate-300 rounded-md pl-1 py-2 pb-1 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm">
           {places.map((place,index ) => {
@@ -83,7 +83,7 @@ export default function Home() {
       <h1 className="lg:text-7xl uppercase text-5xl font-passion-one">Check this out</h1>
     </div>
 
-    <div className="xl:flex flex-wrap flex-row w-full justify-around grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1">
+    <div className="xl:flex w-full justify-around grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 p-4 md:p-0">
       {blogPosts.map((blog,index) => {
         return (
           <BlogCard blog={blog}/>
@@ -93,7 +93,7 @@ export default function Home() {
 
     <div className='flex items-center justify-center'>
       <button 
-       className="blackbutton bg-rent-black rounded-lg h-14 md:w-44 w-28 justify-center align-center w-full text-white capitalize font-passion-one md:text-4xl text-3xl"
+       className="blackbutton bg-rent-black rounded-lg h-14 md:w-44 w-32 justify-center align-center w-full text-white capitalize font-passion-one md:text-4xl text-3xl"
        onClick={() => router.push("/news")}
       >
         See all</button>
@@ -119,7 +119,7 @@ export default function Home() {
       
     <div className='flex items-center justify-center'>
       <button 
-       className="blackbutton bg-rent-black rounded-lg h-14 md:w-44 w-28 justify-center align-center w-full text-white capitalize font-passion-one md:text-4xl text-3xl"
+       className="blackbutton bg-rent-black rounded-lg h-14 md:w-44 w-32 justify-center align-center w-full text-white capitalize font-passion-one md:text-4xl text-3xl"
       onClick={() => router.push("/fleet")}
       >
         See all

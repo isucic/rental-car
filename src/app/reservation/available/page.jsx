@@ -54,7 +54,7 @@ const AvailableCars = () => {
                             <p className="font-bold text-xl">{car.title}</p><p className="pl-1 text-xl">or similar</p>
                         </div>
 
-                        <div className="relative p-10 items-center flex justify-center w-96 h-72">
+                        <div className="relative items-center flex justify-center w-full h-72">
                             <Image
                             src={car.photo}
                             alt={car.car}
@@ -80,7 +80,9 @@ const AvailableCars = () => {
 
                         <div className="flex justify-center m-4">
                             <Link href="/reservation/details" className="w-full">
-                            <button className="red-btn bg-rent-red text-2xl text-white uppercase p-3 w-full rounded-lg hover:bg-rent-light-red">
+                            <button 
+                                className="red-btn bg-rent-red text-2xl text-white uppercase p-3 w-full rounded-lg 
+                                            hover:bg-rent-light-red">
                                 Select
                             </button>
                             </Link>

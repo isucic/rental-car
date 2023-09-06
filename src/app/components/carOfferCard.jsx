@@ -7,12 +7,12 @@ const CarOfferCard = ({car}) => {
     const pathname = usePathname();
     const pageName = pathname.split("/")[1];
     return (
-        <div className="flex flex-col flex-shrink-0 justify-self-center rounded-md bg-rent-white items-center justify-center p-4 mb-4">
+        <div className="flex flex-col flex-shrink-0 justify-self-center rounded-md bg-rent-white items-center justify-center p-4 m-4">
             <div className="p-3 relative w-80 h-60 justify-center items-center flex">
                 <Image
                         src={car.photo}
                         alt={car.title}
-                        width={(pageName === "fleet") ? 300 : 260}
+                        width={(pageName === "fleet") ? 300 : 230}
                         height={(pageName === "fleet") ? 260 : 220}
                         fit
                 />
