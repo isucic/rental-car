@@ -42,14 +42,16 @@ const Footer = () => {
 
     return (
         // <div className="bg-red-500 w-full ">
-                <div className="w-full bg-red-500 flex justify-between sm:px-14 px-2 py-5 mt-3">
-
-                    <div className="pb-10 sm:pb-0 pt-5 text-left text-2xl inline-block">
-                        {createItems(footerItems)}
-                    </div>
+                <div className="w-full bg-red-500 flex justify-between items-center sm:flex-row flex-col sm:px-14 px-2 py-5 mt-3">
                     
-                    <div className="pb-10 sm:pb-0 pt-5 text-left text-2xl inline-block">
-                        {createItems(pages)}
+                    <div className="flex justify-between items-center lg:w-3/6 sm:w-1/2 w-5/6">
+                        <div className="pb-10 sm:pb-0 pt-5 text-left text-2xl inline-block">
+                            {createItems(footerItems)}
+                        </div>
+
+                        <div className="pb-10 sm:pb-0 pt-5 text-left text-2xl inline-block">
+                            {createItems(pages)}
+                        </div>
                     </div>
 
                     <div className="pb-10 sm:pb-0 pt-5 sm:text-base text-sm">
