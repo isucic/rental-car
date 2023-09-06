@@ -87,7 +87,7 @@ const CarDetails = () => {
 
 
                     <div className='flex items-center my-6 justify-end'>
-                    <Link href="/reservation/verification" className="w-full">
+                    <Link href="/reservation/verification" className="w-full justify-end flex">
                     <button className='bg-rent-black rounded-lg h-14 lg:w-44 justify-center align-center w-full'>
                         <p className='blackbutton font-passion-one text-white text-4xl capitalize'>Continue</p>
                     </button>
