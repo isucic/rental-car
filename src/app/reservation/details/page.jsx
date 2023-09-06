@@ -68,7 +68,12 @@ const CarDetails = () => {
                     </div>
 
                     <div className="flex justify-end items-center my-2 text-base md:text-xl">
-                        <FaInfoCircle className="text-xl mr-1" />
+                    <div className="hidden md:block dropdown relative hover:cursor-pointer">
+                            <FaInfoCircle className="text-xl arrow-fleet text-xl mr-2 " />
+                            <div className="information-dropdown hidden dropdown-content bg-rent-white p-2 rounded-md absolute z-10 shadow-2xl w-max bottom-2 right-10">
+                                <p className="normal-case text-base">The amount of the security deposit varies depending on the car group you choose for your reservation. </p>
+                            </div>
+                        </div>
                         <p className="">Security deposit:</p>
                         <p className=" ml-2">500 €</p>
                     </div>
@@ -82,7 +87,7 @@ const CarDetails = () => {
 
 
                     <div className='flex items-center my-6 justify-end'>
-                    <Link href="/reservation/verification">
+                    <Link href="/reservation/verification" className="w-full">
                     <button className='bg-rent-black rounded-lg h-14 lg:w-44 justify-center align-center w-full'>
                         <p className='blackbutton font-passion-one text-white text-4xl capitalize'>Continue</p>
                     </button>

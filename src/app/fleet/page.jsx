@@ -41,7 +41,7 @@ const Fleet = () => {
                         <>
                          <h1 className="uppercase font-comfortea text-2xl flex items-center">
                         {type.title}
-                        <div className="dropdown relative hover:cursor-pointer">
+                        <div className="hidden md:block dropdown relative hover:cursor-pointer">
                             <FaInfoCircle className="arrow-fleet text-xl ml-3 mb-2 " />
                             <div className="information-dropdown hidden dropdown-content bg-rent-white p-2 rounded-md absolute z-10 shadow-2xl w-max bottom-2 left-10">
                                 <p className="normal-case text-base">{type.description}</p>
@@ -53,7 +53,7 @@ const Fleet = () => {
                         <div className="flex items-center gap-5">
                 
                         <FaArrowCircleLeft onClick={() => scrollLeft(type.category)} className="hidden md:block text-5xl cursor-pointer"/>
-                        <div id={type.category} className="ml-8 carousel py-4 flex items-center justify-start overflow-x-auto scroll-smooth scrollbar-hide gap-8">
+                        <div id={type.category} className="carousel py-4 flex items-center justify-start overflow-x-auto scroll-smooth scrollbar-hide gap-8">
                         {cars.map((car) => {
                             if(car.category === type.category)
                             return (
