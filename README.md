@@ -1,3 +1,9 @@
+## Documentation
+
+- [Excalidraw wireframe](https://excalidraw.com/#room=b2d21ffb72d56b5ec12b,8vTT4qRGpMG440Wtiazq0A)
+
+- [Figma high fidelity prototype](https://www.figma.com/file/3kTG8ApgdJIh58tbxhkCpi/Car-Rental?type=design&node-id=0%3A1&mode=design&t=bdN8FZFlXFT1teba-1)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
