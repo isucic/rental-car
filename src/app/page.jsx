@@ -52,6 +52,7 @@ export default function Home() {
 
     <div className="xl:flex w-full justify-around grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 p-4 md:p-0">
       {blogPosts.map((blog,index) => {
+        if (index < 3)
         return (
           <BlogCard key={index} blog={blog}/>
         )
