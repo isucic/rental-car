@@ -24,7 +24,7 @@ const RightNavbar = ({mobile}) => {
                      // passHref
                     >
                         <p className="text-center py-2 whitespace-nowrap hover:bg-rent-red">
-                        {"Login"}
+                        Sign In
                         </p>
                     </Link>
 
@@ -34,7 +34,7 @@ const RightNavbar = ({mobile}) => {
                      // passHref
                     >
                         <p className="text-center py-4 whitespace-nowrap hover:bg-rent-red">
-                        {"Sign Up"}
+                        Sign Up
                         </p>
                     </Link>
 

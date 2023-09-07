@@ -5,7 +5,7 @@ import Link from "next/link"
 const BlogCard = ({blog}) => {
     return (
         <Link href={`news/${blog.id}`}>
-        <div className="flex flex-col justify-self-center mb-6 m-0 lg:m-2 hover:scale-105">
+        <div className="flex flex-col justify-self-center mb-6 m-0 lg:m-2 md:hover:scale-105">
             <div className="md:w-80 sm:w-80 w-64 md:h-64 sm:h-72 h-64 relative ">
                 <Image
                     src={blog.photo}
