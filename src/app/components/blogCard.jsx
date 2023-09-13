@@ -16,7 +16,7 @@ const BlogCard = ({blog}) => {
             </div>
 
             <div 
-             className="font-comfortea relative xl:w-96 w-96 md:w-80 xl:h-52 h-52 md:h-56 p-5 rounded-md bg-rent-white
+             className="font-comfortea relative xl:w-96 w-80 md:w-80 xl:h-52 h-56 md:h-56 p-5 rounded-md bg-rent-white
                         shadow-md -mt-12 xl:ml-7 ml-0 md:ml-7
                         "
                         >
