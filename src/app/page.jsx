@@ -29,7 +29,7 @@ export default function Home() {
 
 
     {/* <ReservationSearch /> */}
-    <div className='relative mt-10 w-full h-front-photo flex items-center justify-center'>
+    <div className='relative w-full h-front-photo flex items-center justify-center'>
           <Image
            src="/front.webp"
            alt="car-home"
